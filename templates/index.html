@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rotscan</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="terminal">
+        <div class="header">
+            <div class="logo"></div>
+            <span class="title">rotscan</span>
+            <div class="nav">
+                <a href="https://github.com/h73i" target="_blank">github</a>
+                <span onclick="exitApp()">exit</span>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="input-section">
+                <input type="text" id="target" placeholder="enter target ip or domain">
+                <select id="scan-type">
+                    <option value="-sS">SYN scan</option>
+                    <option value="-sT">TCP connect</option>
+                    <option value="-sU">UDP scan</option>
+                    <option value="-sA">ACK scan</option>
+                    <option value="-sF">FIN scan</option>
+                    <option value="-sN">NULL scan</option>
+                </select>
+                <button onclick="scan()">scan</button>
+            </div>
+            
+            <div class="results" id="results">
+                <div class="empty">ready to scan</div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
